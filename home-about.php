@@ -18,7 +18,7 @@
 				<div class="col-md-12 box_2" >					
 					<div>
 						<div class="most-1">
-							<h6 style="margin-bottom: 55px;font-size: 16px;padding:0 20px;">
+							<h6 style="margin-bottom: 55px;font-size: 16px;padding:0 20px;line-height: 25px;">
 								<?php echo esc_attr($theme_options['custom_desciption_1']); ?>
 							</h6>
 							 <p style="padding:0 20px;" class="p1"><a><?php echo esc_attr($theme_options['custom_text_1_1']); ?></a></p>
