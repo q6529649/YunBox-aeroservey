@@ -4,7 +4,7 @@
 		<div class="container">
 			<div class="col-md-5">
 				<p class="p1" style="text-align:center;">
-					<img style="width:100%;" src="../wps/wp-content/themes/YunBox-yfl/images/sp1.jpg">
+					<img style="width:100%;" src="../wp-content/themes/kadima/images/sp1.jpg">
 					<!--img class=" zoom-img" src="<?php echo esc_url($theme_options['port_img_'.$i]); ?>" alt="<?php echo esc_attr($theme_options['port_title_'.$i]); ?>"-->
 				</p>
 			</div>
