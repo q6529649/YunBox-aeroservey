@@ -1367,8 +1367,11 @@ h1, h2, h3, h4, h5, h6 {
 .dropdown-menu2 li:nth-child(5){
 	background:url(../images/5.png) center top no-repeat;
 }
-.dropdown-menu2 li:nth-child(-n+4){
-	border-right:1px dashed #000;
+.dropdown-menu2 li:nth-child(-n+5){
+	border-right: 1px dashed #000;
+    text-align: center;
+    float: left;
+    list-style: none;
 }
 .dropdown-menu .container{
 	padding-top:20px;
@@ -1378,23 +1381,23 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
     font-size: 16px;
 }
-.row .col-md-12 .col-md-12:nth-child(1){
+.isotope .col-md-12 .col-md-12:nth-child(1){
 	background:url(../images/z1.png) center top no-repeat;
 }
-.row .col-md-12 .col-md-12:nth-child(2){
+.isotope .col-md-12 .col-md-12:nth-child(2){
 	background:url(../images/z2.png) center top no-repeat;
 }
-.row .col-md-12 .col-md-12:nth-child(3){
+.isotope .col-md-12 .col-md-12:nth-child(3){
 	background:url(../images/z3.png) center top no-repeat;
 }
-.row .col-md-12 .col-md-12:nth-child(4){
+.isotope .col-md-12 .col-md-12:nth-child(4){
 	background:url(../images/z5.png) center top no-repeat;
 }
-.row .col-md-12 .col-md-12:nth-child(5){
+.isotope .col-md-12 .col-md-12:nth-child(5){
 	background:url(../images/z4.png) center top no-repeat;
 }
 
-.row .col-md-12 .col-md-12:nth-child(-n+5){
+.isotope .col-md-12 .col-md-12:nth-child(-n+5){
 	height: 180px;
 	margin-bottom: 20px;
 	padding-top:35px;
