@@ -32,30 +32,18 @@
 		}
 	?>
 	<?php wp_head(); ?>
+	<script>
+		jQuery(document).ready(function($){
+			var width = $(window).width();
+			console.log(width);
+			$(".dropdown-menu").css("width",width+"px");
+		})
+	</script>
 </head>
 <body <?php body_class(); ?>>
 
 <div>
 	<!-- Header Section -->
-	<div class="header_section" >
-		<div class="container" >
-			<!-- Logo & Contact Info -->
-			<div class="row ">
-				<div class="col-md-12 col-sm-12 wl_rtl" style="float: right;padding-top:5px;" >
-					<div class="logo">
-					<a href="<?php echo esc_url(home_url( '/' )); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<?php if($wl_theme_options['upload_image_logo']){ ?>
-						<img class="img-responsive" src="<?php echo $wl_theme_options['upload_image_logo']; ?>" style="height:<?php if($wl_theme_options['height']!='') { echo $wl_theme_options['height']; }  else { "80"; } ?>px; width:<?php if($wl_theme_options['width']!='') { echo $wl_theme_options['width']; }  else { "200"; } ?>px;" />
-						<?php } else {
-							echo get_bloginfo('name');
-						} ?>
-					</a>
-				</div>
-				</div>
-			</div>
-			<!-- /Logo & Contact Info -->
-		</div>
-	</div>
 	<!-- /Header Section -->
 	<!-- Navigation  menus -->
 	<div class="navigation_menu "  data-spy="affix" data-offset-top="95" id="kadima_nav_top">
@@ -69,7 +57,15 @@
 					  <span class="icon-bar"></span>
 					</button>
 				</div>
-				
+					<div class="logo">
+						<a href="<?php echo esc_url(home_url( '/' )); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<?php if($wl_theme_options['upload_image_logo']){ ?>
+							<img class="img-responsive" src="<?php echo $wl_theme_options['upload_image_logo']; ?>" style="height:<?php if($wl_theme_options['height']!='') { echo $wl_theme_options['height']; }  else { "80"; } ?>px; width:<?php if($wl_theme_options['width']!='') { echo $wl_theme_options['width']; }  else { "200"; } ?>px;" />
+							<?php } else {
+								echo get_bloginfo('name');
+							} ?>
+						</a>
+					</div>
 				<div id="menu" class="collapse navbar-collapse ">
 					<?php
 						wp_nav_menu( array(

@@ -73,7 +73,7 @@ p, .textwidget {
 	padding-top: 15px;
 	text-align: center;
     margin: 0 auto;
-    float: none;
+    float: left;
     display: table;
 }
 .logo a {
@@ -288,6 +288,7 @@ p, .textwidget {
     border-radius: 0px;
     margin-bottom: 65px;
     transition: all 0.4s ease 0s;
+	text-align: left;
 }
 
 
@@ -298,11 +299,15 @@ p, .textwidget {
     word-wrap: break-word;
     margin: 0 0 10px;
     font-weight: 600;
+	padding-left: 20%;
+    padding-right: 10%;
     font-family: 'Open Sans', 'Arimo', Arial, Helvetica, sans-serif;
 }
 .kadima_service_detail p {
     font-size: 16px;
     line-height: 27px;
+	padding-left: 20%;
+    padding-right: 10%;
 }
 .kadima_service_area:hover .kadima_service_iocn {
     background-position: 0 -100%;
@@ -2920,4 +2925,5 @@ table td {
     font-family: 'AVGARDD', 'Arimo', Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 18px;
+	height:58px;
 }

@@ -29,6 +29,7 @@
 }
 .navbar-default .navbar-nav> li> a:hover, .navbar-default .navbar-nav> li> a:focus {
     background-color: #007bd9;
+	height: 58px;
 }
 .dropdown-menu {
     background-color: rgba(49, 162, 221, 0.9);
@@ -305,6 +306,7 @@
     background-size: 100% 200%;
     background-color: #edf0f2;
     background-image: linear-gradient(to bottom, #edf0f2 50%, #31A3DD 50%);
+	text-align: left;
 }
 .kadima_widget_tags a:hover, .tagcloud a:hover {
     border: 1px solid #31A3DD;
@@ -599,21 +601,15 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
-    -webkit-box-shadow: 3px 3px 0 rgba(201, 201, 201, 1);
-    -moz-box-shadow: 3px 3px 0 rgba(201, 201, 201, 1);
-    box-shadow: 3px 3px 0 rgba(201, 201, 201, 1);
     color: #fff;
     font-family: 'Open Sans', 'Arimo', Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-size: 15px;
 }
 .navbar-default .navbar-nav> .open> a, .navbar-default .navbar-nav> .open> a:hover, .navbar-default .navbar-nav> .open> a:focus {
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-    -webkit-box-shadow: 3px 3px 0 rgba(201, 201, 201, 1);
-    -moz-box-shadow: 3px 3px 0 rgba(201, 201, 201, 1);
-    box-shadow: 3px 3px 0 rgba(201, 201, 201, 1);
+    background-color: #007bd9;
+    border-radius: 15px 15px 0 0;
+    color: #fff;
     color: #fff;
     font-family: 'AVGARDD', 'Arimo', Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -646,6 +642,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .dropdown-menu {
     position: absolute;
+	height:229px;
     top: 100%;
     right: auto;
     left: 0;
@@ -665,6 +662,10 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
     text-transform: uppercase;
     font-family: 'Open Sans', 'Arimo', Arial, Helvetica, sans-serif;
+	background-color: rgba(255, 255, 255, 0.85);	
+    -webkit-box-shadow: 0 3px 4px rgba(0,0,0,0.18);
+    box-shadow: 0 3px 4px rgba(0,0,0,0.18);
+
 }
 .dropdown-menu> li> a {
     display: block;
@@ -798,8 +799,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .fa-angle-down {
     font-size: 18px !important;
-    float: right;
-    margin-right: -13px;
+	display: block;
+    
 }
 .dropdown-submenu {
     position: relative;
@@ -1319,5 +1320,89 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	margin: 0 auto;
 	float: none;
-	display: table;
+	list-style-type:none
 }
+
+.navbar{
+	position:static;
+}
+.nav>li{
+	position:static;
+}
+.menu-menu-1-container ul li {
+	float:left;
+}
+.dropdown-menu .container li{
+	width:20%;
+}
+
+
+.menu-item:hover .dropdown-menu{
+	height:160px;
+	
+}
+.dropdown-menu{
+	height:0;
+	transition:height .2s linear;
+	overflow:hidden;
+	display:block !important;
+	
+}
+
+.dropdown-menu2 li{
+	padding-top:93px;
+}
+.dropdown-menu2 li:nth-child(1){
+	background:url(../images/1.png) center top no-repeat;
+}
+.dropdown-menu2 li:nth-child(2){
+	background:url(../images/2.png) center top no-repeat;
+}
+.dropdown-menu2 li:nth-child(3){
+	background:url(../images/3.png) center top no-repeat;
+}
+.dropdown-menu2 li:nth-child(4){
+	background:url(../images/4.png) center top no-repeat;
+}
+.dropdown-menu2 li:nth-child(5){
+	background:url(../images/5.png) center top no-repeat;
+}
+.dropdown-menu2 li:nth-child(-n+4){
+	border-right:1px dashed #000;
+}
+.dropdown-menu .container{
+	padding-top:20px;
+}
+.dropdown-menu2 a{
+	color:#000;
+	font-weight: bold;
+    font-size: 16px;
+}
+.row .col-md-12 .col-md-12:nth-child(1){
+	background:url(../images/z1.png) center top no-repeat;
+}
+.row .col-md-12 .col-md-12:nth-child(2){
+	background:url(../images/z2.png) center top no-repeat;
+}
+.row .col-md-12 .col-md-12:nth-child(3){
+	background:url(../images/z3.png) center top no-repeat;
+}
+.row .col-md-12 .col-md-12:nth-child(4){
+	background:url(../images/z5.png) center top no-repeat;
+}
+.row .col-md-12 .col-md-12:nth-child(5){
+	background:url(../images/z4.png) center top no-repeat;
+}
+
+.row .col-md-12 .col-md-12:nth-child(-n+5){
+	height: 180px;
+	margin-bottom: 20px;
+	padding-top:35px;
+}
+.product_title{
+	font-size: 30px;
+    font-weight: bold;
+}
+
+
+

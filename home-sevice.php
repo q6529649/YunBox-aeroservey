@@ -11,14 +11,14 @@
 		</div>
 	</div>
 </div>
-
+</div>
 <?php } ?>
-<section class="services wrapper services_line" id="services_three" style="background-color: ##dadada;">
+<section class="services wrapper services_line" id="services_three" style="background-color: #fff;">
 <div class="container">
 		<div class="row isotope" id="isotope-service-container">
 			<div class="col-md-12" style="padding:5em 0;">
-				<?php for($i=1; $i<5; $i++ ) { ?>
-				<div class="col-xs-12 col-sm-2 service">
+				<?php for($i=1; $i<6; $i++ ) { ?>
+				<div class="col-md-12 col-xs-12 service">
 					<div class="kadima_service_area appear-animation bounceIn appear-animation-visible">
 						<?php if($wl_theme_options['custom_img_3_'.$i] !='') { ?>
 							<div>
@@ -27,7 +27,6 @@
 								</a>
 							</div>
 						<?php } ?>
-						<hr style="border:none;border-top:1px dashed #007bd9;width:70%;" />
 						<div class="kadima_service_detail media-body">
 							<?php if($wl_theme_options['custom_title_3_'.$i] !='') { ?>
 								<h3>
@@ -35,7 +34,6 @@
 										<?php echo esc_attr($wl_theme_options['custom_title_3_'.$i]); ?>
 									</a>
 								</h3>
-								
 							<?php } ?>
 							<?php if($wl_theme_options['custom_text_3_'.$i] !='') { ?><p><?php echo apply_filters('the_content', $wl_theme_options['custom_text_3_'.$i], true); ?></p><?php } ?>
 						</div>
