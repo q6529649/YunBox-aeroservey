@@ -1,6 +1,6 @@
 <?php $wl_theme_options = kadima_get_options(); ?>
 
-<div class="kadima_footer_area" style="padding: 10px 0 5px;">
+<div class="kadima_footer_area" style="padding: 50px 0 5px 10px;">
 	<div class="container">
 		<div class="col-md-12">
 			<!--<p class="kadima_footer_copyright_info" >
