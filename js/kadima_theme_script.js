@@ -5,7 +5,7 @@
 	log.l('%c了解更多 -> https://www.yunclever.com', style);
 })();
 /* menu */
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
 	var width = $(window).width();
 	$(".dropdown-menu").css("width",width+"px");
 	if( jQuery(window).width() > 767) {
