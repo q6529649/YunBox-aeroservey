@@ -6,6 +6,8 @@
 })();
 /* menu */
 jQuery(document).ready(function() {
+	var width = $(window).width();
+	$(".dropdown-menu").css("width",width+"px");
 	if( jQuery(window).width() > 767) {
 	   jQuery('.nav li.dropdown').hover(function() {
 		   jQuery(this).addClass('open');

@@ -32,13 +32,8 @@
 		}
 	?>
 	<?php wp_head(); ?>
-	<script>
-		jQuery(document).ready(function($){
-			var width = $(window).width();
-			console.log(width);
-			$(".dropdown-menu").css("width",width+"px");
-		})
-	</script>
+	<script src="https://use.typekit.net/cka4pbd.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body <?php body_class(); ?>>
 
