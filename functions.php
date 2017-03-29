@@ -719,4 +719,43 @@
 	    );
 	}
 	//smilies_reset();
+	
+	function woocommerce_subcategory_thumbnail( $category ) {
+		$small_thumbnail_size  	= apply_filters( 'subcategory_archive_thumbnail_size', 'shop_catalog' );
+		$dimensions    			= wc_get_image_size( $small_thumbnail_size );
+		$thumbnail_id  			= get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true  );
+
+		if ( $thumbnail_id ) {
+			$image = wp_get_attachment_image_src( $thumbnail_id, $small_thumbnail_size  );
+			$image = $image[0];
+		} else {
+			$image = wc_placeholder_img_src();
+		}
+
+		if ( $image ) {
+			// Prevent esc_url from breaking spaces in urls for image embeds
+			// Ref: https://core.trac.wordpress.org/ticket/23605
+			$image = str_replace( ' ', '%20', $image );
+
+			echo '<div class="col-md-4"><img src="' . esc_url( $image ) . '" alt="' . esc_attr( $category->name ) . '" width="' . esc_attr( $dimensions['width'] ) . '" height="' . esc_attr( $dimensions['height'] ) . '" /></div>';
+		}
+	}
+	function woocommerce_template_loop_category_title( $category ) {
+		?>
+		<div class="col-md-6">
+			<h3>
+				<span>
+				<?php
+					echo $category->name;
+					if ( $category->count > 0 )
+						echo apply_filters( 'woocommerce_subcategory_count_html', '', $category );
+				?>
+				</span>
+			</h3>
+		<div>
+		<div class="col-md-1" style="margin-top:10%;;float:right;position:absolute;right:-200px;">
+			<img style="width:20px !important;" src="../wps/wp-content/themes/YunBox-yfl/images/jt1.png">
+		<div>
+		<?php
+	}
 ?>
