@@ -1356,7 +1356,8 @@ h1, h2, h3, h4, h5, h6 {
 	background:url(../images/3.png) center top no-repeat;
 }
 .dropdown-menu2 li:nth-child(4){
-	background:url(../images/4.png) center top no-repeat;
+	background:url(../images/4.png) center top no-repeat;	
+    border-right: 0 !important;
 }
 .dropdown-menu2 li:nth-child(-n+4){
 	border-right: 1px dashed #000;
