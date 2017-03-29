@@ -719,6 +719,28 @@
 	    );
 	}
 	//smilies_reset();
+	add_filter( 'woocommerce_product_tabs', 'wc_remove_reviews_tab' );
+	function wc_remove_reviews_tab( $tabs ){   
+		unset($tabs['reviews']);
+		return $tabs;
+	}
+	// Change the browser title of shop base page
+	add_filter('post_type_archive_title', 'theme_wc_shop_browser_title' );
+	function theme_wc_shop_browser_title( $title ){
+		if( $title == __('Products', 'woocommerce')){
+			$shop_page_id = woocommerce_get_page_id( 'shop' );
+			$page_title   = get_the_title( $shop_page_id );
+			return $page_title;
+		}
+		return $title;
+	}	
+	add_filter( 'woocommerce_page_title', 'customWooc_shop_page_title');
+	add_filter( 'woocommerce_show_page_title', false );
+	function customWooc_shop_page_title( $page_title ) {
+		if( 'Shop' == $page_title) {
+			return '';
+		}
+	}
 	
 	function woocommerce_subcategory_thumbnail( $category ) {
 		$small_thumbnail_size  	= apply_filters( 'subcategory_archive_thumbnail_size', 'shop_catalog' );
@@ -733,18 +755,16 @@
 		}
 
 		if ( $image ) {
-			// Prevent esc_url from breaking spaces in urls for image embeds
-			// Ref: https://core.trac.wordpress.org/ticket/23605
 			$image = str_replace( ' ', '%20', $image );
 
-			echo '<div class="col-md-4"><img src="' . esc_url( $image ) . '" alt="' . esc_attr( $category->name ) . '" width="' . esc_attr( $dimensions['width'] ) . '" height="' . esc_attr( $dimensions['height'] ) . '" /></div>';
+			echo '<div class="col-md-4 cat-thumbnail"><img src="' . esc_url( $image ) . '" alt="' . esc_attr( $category->name ) . '" width="' . esc_attr( $dimensions['width'] ) . '" height="' . esc_attr( $dimensions['height'] ) . '" /></div>';
 		}
-	}
+	}	
 	function woocommerce_template_loop_category_title( $category ) {
 		?>
 		<div class="col-md-6">
 			<h3>
-				<span>
+				<span class="cat-title-<?php echo $category->slug;?>">
 				<?php
 					echo $category->name;
 					if ( $category->count > 0 )
@@ -752,9 +772,10 @@
 				?>
 				</span>
 			</h3>
+			<p><?php echo $category->description;?><p/>
 		<div>
 		<div class="col-md-1" style="margin-top:10%;;float:right;position:absolute;right:-200px;">
-			<img style="width:20px !important;" src="../wps/wp-content/themes/YunBox-yfl/images/jt1.png">
+			<img style="width:20px !important;" src="//aeroservey.site.yunclever.com/wp-content/themes/kadima/images/jt-<?php echo $category->slug;?>.png">
 		<div>
 		<?php
 	}

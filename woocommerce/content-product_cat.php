@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <li <?php wc_product_cat_class( '', $category ); ?>>
+	<div class="container">
 	<?php
 	/**
 	 * woocommerce_before_subcategory hook.
@@ -54,4 +55,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 * @hooked woocommerce_template_loop_category_link_close - 10
 	 */
 	do_action( 'woocommerce_after_subcategory', $category ); ?>
+	</div>
 </li>

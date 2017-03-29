@@ -286,14 +286,14 @@ p, .textwidget {
     word-wrap: break-word;
     margin: 0 0 10px;
     font-weight: 600;
-	padding-left: 20%;
+	padding-left: 22%;
     padding-right: 10%;
 }
 .kadima_service_detail p {
 	font-size: 1.2em;
     font-weight: 400;
     line-height: 27px;
-	padding-left: 20%;
+	padding-left: 22%;
     padding-right: 10%;
 }
 .kadima_service_area:hover .kadima_service_iocn {
@@ -984,7 +984,6 @@ p, .textwidget {
 
 .blog-date-left {
     list-style: none;
-    float: left;
     padding: 0px;
     transition: all 0.4s ease 0s;
 }
@@ -1058,20 +1057,7 @@ p, .textwidget {
     color: #999999;
     transition: all 0.4s ease 0s;
 }
-.post-content-wrap {
-    float: left;
-    width: 80%;
-}
 
-/*
-.post-content-wrap img{
-	width:100%;
-}*/
-
-.post-content-wrap-right {
-    float: right;
-    width: 86%;
-}
 .post-content-wrap-right img {
     width: 100%;
 }

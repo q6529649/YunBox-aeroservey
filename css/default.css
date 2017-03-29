@@ -1342,21 +1342,23 @@ h1, h2, h3, h4, h5, h6 {
 	display:block !important;
 	
 }
-
-.dropdown-menu2 li{
-	padding-top:105px;
-}
-.dropdown-menu2 li:nth-child(1){
+.dropdown-menu2 li .menubg-1 {
 	background:url(../images/1.png) center top no-repeat;
+	height: 100px;
 }
-.dropdown-menu2 li:nth-child(2){
+.dropdown-menu2 li .menubg-2 {
 	background:url(../images/2.png) center top no-repeat;
+	height: 100px;
 }
-.dropdown-menu2 li:nth-child(3){
+.dropdown-menu2 li .menubg-3{
 	background:url(../images/3.png) center top no-repeat;
+	height: 100px;
+}
+.dropdown-menu2 li .menubg-4{
+	background:url(../images/4.png) center top no-repeat;
+	height: 100px;
 }
 .dropdown-menu2 li:nth-child(4){
-	background:url(../images/4.png) center top no-repeat;	
     border-right: 0 !important;
 }
 .dropdown-menu2 li:nth-child(-n+4){
@@ -1407,9 +1409,9 @@ h1, h2, h3, h4, h5, h6 {
 	padding-bottom: 50px !important;
 	position: relative;
 }
-.products .product-category img{
-	width:75% !important;
-	float:left !important;
+.products .product-category .cat-thumbnail img{
+	padding: 2em;
+    width: 300px !important;
 }
 .products .product-category h3{
 	text-align: center;
@@ -1417,14 +1419,31 @@ h1, h2, h3, h4, h5, h6 {
 	font-size:22px !important;
 	
 }
-.product-category .col-md-6 span:nth-child(1){
-	border-bottom:4px solid #000;
+.product-category .col-md-6 .cat-title-ca {
+	border-bottom:4px solid #f8be5e;
 	padding-bottom:10px;
 	padding-left: 15px;
     padding-right: 15px;
 }
-.woocommerce .products ul, .woocommerce ul.products{
-	margin-top:0 !important;
+.product-category .col-md-6 .cat-title-ea {
+	border-bottom:4px solid #698aeb;
+	padding-bottom:10px;
+	padding-left: 15px;
+    padding-right: 15px;
+}
+.product-category .col-md-6 .cat-title-ge {
+	border-bottom:4px solid #7acc1f;
+	padding-bottom:10px;
+	padding-left: 15px;
+    padding-right: 15px;
+}
+.product-category .col-md-6 .cat-title-ms {
+	border-bottom:4px solid #f46442;
+	padding-bottom:10px;
+	padding-left: 15px;
+    padding-right: 15px;
 }
 
-
+.woocommerce .products ul, .woocommerce ul.products{
+	margin:0;
+}
