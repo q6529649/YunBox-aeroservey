@@ -272,18 +272,17 @@
 /********* Blog Full width css ********/
 
 .kadima_post_date {
-    color: #fff;
+    color: #999;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
-	background: #007bd9 !important;
 }
 .kadima_blog_comment:hover i, .kadima_blog_comment:hover h6 {
     color: #31A3DD;
 }
 .kadima_fuul_blog_detail_padding h2 a, .kadima_fuul_blog_detail_padding h2 {
-    color: #007bd9;
+    color: #000;
 }
 .kadima_fuul_blog_detail_padding h2 a:hover {
     color: #31A3DD;
