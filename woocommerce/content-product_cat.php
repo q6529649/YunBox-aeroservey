@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	?>
 	</div>
 	<div class="col-md-2">
-		<img class="pull-right" style="width:20px; padding-top: 50%;" src="//aeroservey.site.yunclever.com/wp-content/themes/kadima/images/jt-<?php echo $category->slug;?>.png" />
+		<img class="pull-right" style="width:20px; padding-top: 60%;" src="//aeroservey.site.yunclever.com/wp-content/themes/kadima/images/jt-<?php echo $category->slug;?>.png" />
 	<div>
 	<?php
 	/**
