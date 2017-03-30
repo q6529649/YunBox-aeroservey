@@ -20,9 +20,9 @@ Text Domain: kadima
     margin-right: 0px;
 }
 body {
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif; /*source-sans-pro, chantal, sutro-deluxe-primary, */
+    font-family: leitura-news, adobe-text-pro, nimbus-sans, serif; /*source-sans-pro, chantal, sutro-deluxe-primary, */
 	font-style: normal;
-	font-weight: 300;
+	font-weight: 400;
     background-color: #fff;
 }
 #wrapper {
@@ -286,7 +286,7 @@ p, .textwidget {
 
 .kadima_service_detail h3 {
 	font-size: 3em;
-	font-family: chantal, sans-serif;
+	font-family: nimbus-sans, serif;
     letter-spacing: normal;
     line-height: 32px;
     word-wrap: break-word;

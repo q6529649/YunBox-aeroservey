@@ -32,8 +32,8 @@
 		}
 	?>
 	<?php wp_head(); ?>
-	<!--script src="https://use.typekit.net/cka4pbd.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script-->
+	<script src="https://use.typekit.net/cka4pbd.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body <?php body_class(); ?>>
 
