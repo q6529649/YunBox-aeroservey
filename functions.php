@@ -733,36 +733,17 @@
 			return $page_title;
 		}
 		return $title;
-	}	
-	add_filter( 'woocommerce_page_title', 'customWooc_shop_page_title');
+	}
 	add_filter( 'woocommerce_show_page_title', false );
+	add_filter( 'woocommerce_page_title', 'customWooc_shop_page_title');
 	function customWooc_shop_page_title( $page_title ) {
 		if( 'Shop' == $page_title) {
 			return '';
 		}
 	}
 	
-	function woocommerce_subcategory_thumbnail( $category ) {
-		$small_thumbnail_size  	= apply_filters( 'subcategory_archive_thumbnail_size', 'shop_catalog' );
-		$dimensions    			= wc_get_image_size( $small_thumbnail_size );
-		$thumbnail_id  			= get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true  );
-
-		if ( $thumbnail_id ) {
-			$image = wp_get_attachment_image_src( $thumbnail_id, $small_thumbnail_size  );
-			$image = $image[0];
-		} else {
-			$image = wc_placeholder_img_src();
-		}
-
-		if ( $image ) {
-			$image = str_replace( ' ', '%20', $image );
-
-			echo '<div class="col-md-4 cat-thumbnail"><img src="' . esc_url( $image ) . '" alt="' . esc_attr( $category->name ) . '" width="' . esc_attr( $dimensions['width'] ) . '" height="' . esc_attr( $dimensions['height'] ) . '" /></div>';
-		}
-	}	
 	function woocommerce_template_loop_category_title( $category ) {
 		?>
-		<div class="col-md-6">
 			<h3>
 				<span class="cat-title-<?php echo $category->slug;?>">
 				<?php
@@ -772,11 +753,7 @@
 				?>
 				</span>
 			</h3>
-			<p><?php echo $category->description;?><p/>
-		<div>
-		<div class="col-md-1" style="margin-top:10%;;float:right;position:absolute;right:-200px;">
-			<img style="width:20px !important;" src="//aeroservey.site.yunclever.com/wp-content/themes/kadima/images/jt-<?php echo $category->slug;?>.png">
-		<div>
+			<p style="padding-top: 2em;"><?php echo $category->description;?><p/>
 		<?php
 	}
 ?>

@@ -35,15 +35,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 *
 	 * @hooked woocommerce_subcategory_thumbnail - 10
 	 */
+	?>
+	<div class="col-md-4 cat-thumbnail">
+	<?php
 	do_action( 'woocommerce_before_subcategory_title', $category );
-
+	?>
+	</div>
+	<div class="col-md-6">
+	<?php
 	/**
 	 * woocommerce_shop_loop_subcategory_title hook.
 	 *
 	 * @hooked woocommerce_template_loop_category_title - 10
 	 */
 	do_action( 'woocommerce_shop_loop_subcategory_title', $category );
-
+	?>
+	</div>
+	<div class="col-md-2">
+		<img class="pull-right" style="width:20px; padding-top: 50%;" src="//aeroservey.site.yunclever.com/wp-content/themes/kadima/images/jt-<?php echo $category->slug;?>.png" />
+	<div>
+	<?php
 	/**
 	 * woocommerce_after_subcategory_title hook.
 	 */
